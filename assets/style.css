@@ -1,13 +1,13 @@
 :root {
-  color-scheme: dark;
-  --bg: #242116;
-  --sidebar: #1d1b13;
-  --panel: #302a1b;
-  --line: #5e5131;
-  --text: #f3e8c6;
-  --body-text: #ded1ad;
-  --muted: #bcb08e;
-  --accent: #eacb7c;
+  color-scheme: light;
+  --bg: #d8c476;
+  --sidebar: #c4ac61;
+  --panel: #e5d597;
+  --line: #887541;
+  --text: #272013;
+  --body-text: #352a17;
+  --muted: #4c3b20;
+  --accent: #4f3613;
   --mono: ui-monospace, "Courier New", monospace;
 }
 
@@ -16,7 +16,10 @@
 body {
   margin: 0;
   color: var(--text);
-  background: radial-gradient(ellipse at 64% 0%, #39301c 0%, transparent 58%), var(--bg);
+  background:
+    radial-gradient(ellipse at 66% 0%, #f5e6a5 0%, transparent 63%),
+    repeating-linear-gradient(90deg, transparent 0 27px, #7657260d 27px 28px),
+    var(--bg);
   font: 16px/1.85 system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
 }
 
@@ -32,7 +35,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 aside {
   padding: 38px 20px;
   border-right: 1px solid var(--line);
-  background: repeating-linear-gradient(90deg, transparent 0 23px, #e1b55207 23px 24px), var(--sidebar);
+  background: repeating-linear-gradient(90deg, transparent 0 23px, #77562414 23px 24px), var(--sidebar);
 }
 
 .brand {
@@ -73,7 +76,7 @@ nav a:hover, nav a[aria-current="page"] {
 main {
   width: 100%;
   max-width: 1120px;
-  padding: 60px clamp(24px, 6vw, 88px) 82px;
+  padding: clamp(24px, 5vh, 56px) clamp(24px, 6vw, 88px) 82px;
   margin-inline: auto;
 }
 
@@ -87,7 +90,7 @@ h1 {
   overflow-wrap: anywhere;
 }
 
-.home h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); }
+.home h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); }
 .testroom h1 { font-family: var(--mono); }
 
 h2 {
@@ -106,8 +109,8 @@ ul { padding-left: 1.4rem; }
 .room-photo {
   margin: 24px 0 26px;
   overflow: hidden;
-  border: 1px solid #887447;
-  background: #19160f;
+  border: 1px solid var(--line);
+  background: var(--panel);
 }
 
 .room-photo img {
@@ -115,6 +118,8 @@ ul { padding-left: 1.4rem; }
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+  max-height: 48vh;
+  max-height: 48svh;
   object-fit: cover;
 }
 
@@ -127,13 +132,22 @@ ul { padding-left: 1.4rem; }
 
 .photo-link:hover .room-photo { border-color: var(--accent); }
 .photo-link:hover figcaption { color: var(--accent); }
-.testroom .room-photo img { aspect-ratio: auto; }
+/* A 3:2 image at 78% of the viewport width in height units is 52% of its height. */
+.testroom .room-photo {
+  max-width: min(48rem, 78vh);
+  max-width: min(48rem, 78svh);
+}
+
+.testroom .room-photo img {
+  aspect-ratio: auto;
+  max-height: none;
+}
 
 .notice, .transcript {
   margin: 24px 0;
   padding: 18px 22px;
   border: 1px solid var(--line);
-  border-left: 3px solid #a68a4c;
+  border-left: 3px solid var(--line);
   background: var(--panel);
 }
 
@@ -200,5 +214,5 @@ footer {
 
 @media (max-width: 460px) {
   .cards { grid-template-columns: 1fr; }
-  .room-photo img { aspect-ratio: 4 / 3; }
+  .home .room-photo img { aspect-ratio: 4 / 3; }
 }
