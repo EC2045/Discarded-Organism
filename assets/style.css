@@ -143,6 +143,16 @@ ul { padding-left: 1.4rem; }
   max-height: none;
 }
 
+.room-photo.portrait {
+  max-width: min(26rem, 44vh);
+  max-width: min(26rem, 44svh);
+}
+
+.room-photo.portrait img {
+  aspect-ratio: auto;
+  max-height: none;
+}
+
 .notice, .transcript {
   margin: 24px 0;
   padding: 18px 22px;
