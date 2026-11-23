@@ -7,6 +7,8 @@
 - [アーカイブトップ](index.html)
 - [世界観・法則](world.html)
 - [階層：-001testroom.rsh](levels/-001testroom.html)
+- [階層：-002sync-think-think](levels/-002sync-think-think.html)
+- [階層：-003back-yard](levels/-003back-yard.html)
 - [廃棄生命体：Wolthing](entities/wolthing.html)
 - [探索記録：TR-001](records/TR-001.html)
 
