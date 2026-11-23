@@ -226,3 +226,6 @@ footer {
   .cards { grid-template-columns: 1fr; }
   .home .room-photo img { aspect-ratio: 4 / 3; }
 }
+
+.staff-art { background: #fff; }
+.staff-art img { image-rendering: pixelated; }

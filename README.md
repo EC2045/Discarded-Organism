@@ -1,6 +1,6 @@
 # Discarded Organism — 東暦版バックルーム（仮）
 
-神が世界創造時に試作・廃棄したデータの断片が残る「現実の外側」の領域。多くの領域は無人で、一部に廃棄生命体がいる。**接続方式は不明**。
+神が世界創造時に試作・廃棄したデータの断片が残る「現実の外側」の領域。多くの領域は無人で、一部に廃棄生命体がいる。**接続の原理は不明**。一時的な入口と領域間の移動経路は、各階層のアクセス欄を参照。
 
 ## HTML資料
 
@@ -9,6 +9,8 @@
 - [階層：-001testroom.rsh](levels/-001testroom.html)
 - [階層：-002sync-think-think](levels/-002sync-think-think.html)
 - [階層：-003back-yard](levels/-003back-yard.html)
+- [階層：004WaonJinkoku-beta](levels/004WaonJinkoku-beta.html)
+- [物品：□□□の杖](objects/unnamed-staff.html)
 - [廃棄生命体：Wolthing](entities/wolthing.html)
 - [廃棄生命体：Lina-v3](entities/lina-v3.html)
 - [探索記録：TR-001](records/TR-001.html)
